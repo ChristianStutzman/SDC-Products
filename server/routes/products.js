@@ -17,14 +17,20 @@ const getProducts = async (req, res) => {
 }
 
 const getSingleProduct = async (req, res) => {
-  console.log(req.params);
   const productId = req.params.product_id;
-  const productInfo = await models.Products.findAll({
+  let productInfo = await models.Products.findAll({
+    attributes: ['id', 'name', 'slogan', 'description', 'category', 'default_price'],
     where: {
       id: productId
     }
   })
-  res.json(productInfo);
+  productInfo[0].dataValues.features = await models.Features.findAll({
+    attributes: ['feature', 'value'],
+    where: {
+      product_id: productId
+    }
+  })
+  res.json(productInfo[0]);
 }
 
 module.exports = {

@@ -3,7 +3,9 @@ const app = express();
 const models = require('../models');
 const routes = require('./routes');
 
-app.get('/products', routes.getProducts)
+app.get('/products', routes.getProducts);
+
+app.get('/products/:product_id', routes.getSingleProduct);
 
 
 models.sequelize.sync().then(x => {

@@ -9,6 +9,7 @@ app.get('/products/:product_id', routes.getSingleProduct);
 
 app.get('/products/:product_id/styles', routes.getStyles);
 
+app.get('/products/:product_id/related', routes.getRelated);
 
 models.sequelize.sync().then(x => {
   app.listen('8080', () => {

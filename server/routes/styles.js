@@ -1,5 +1,5 @@
 const models = require('../../models');
-const { Op, fn, col, IndexHints } = require('sequelize');
+const { Op, IndexHints } = require('sequelize');
 
 const getStyles = async (req, res) => {
   const productId = req.params.product_id;

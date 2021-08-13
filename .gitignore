@@ -3,3 +3,5 @@ config.js
 SDC-Application-Data/
 newrelic.js
 newrelic*
+product_ids.csv
+artillery-test.yml

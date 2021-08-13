@@ -1,7 +1,11 @@
+require('newrelic');
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const models = require('../models');
 const routes = require('./routes');
+
+app.use(cors())
 
 app.get('/products', routes.getProducts);
 

@@ -1,3 +1,5 @@
 node_modules/
 config.js
 SDC-Application-Data/
+newrelic.js
+newrelic*

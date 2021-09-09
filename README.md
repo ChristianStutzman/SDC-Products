@@ -21,7 +21,7 @@ Response
 
 `Status: 200 OK`
 
-```json
+```
     [
       {
             "id": 1,
@@ -70,7 +70,7 @@ Response
 
 `Status: 200 OK`
 
-```json
+```
     {
         "id": 11,
         "name": "Air Minis 250",
@@ -109,7 +109,7 @@ Response
 
 `Status: 200 OK`
 
-```json
+```
     {
         "product_id": "1",
         "results": [
